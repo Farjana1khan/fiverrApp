@@ -116,7 +116,7 @@ export const cards = [
       desc: "I will create ai art character from your images and prompts",
       price: 59,
       star: 5,
-      username: "Anna Bell",
+      username: "Anna",
     },
     {
       id: 2,
