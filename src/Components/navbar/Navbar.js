@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Navbar.scss";
 export default function Navbar() {
+
+  const {pathname} = useLocation()
 
     const [active, setActive] = useState(false)
     const [open, setOpen] = useState(false);
@@ -24,7 +26,7 @@ export default function Navbar() {
   }
   
     return (
-    <div className={active ? "navbar active" : "navbar"}>
+    <div className={active || pathname !== "/" ? "navbar active" : "navbar"}>
       <div className="container">
         <div className="logo">
           <Link className="link" to="/">
@@ -78,13 +80,41 @@ export default function Navbar() {
         </div>
       </div>
       {
-        active && <>
-        <hr/>
-        <div className="menu">
-  <span>Test1</span>
-  <span>Test1</span>
-        </div>
-        </>
+        (active || pathname !== "/" ) &&(
+          <>
+          <hr/>
+          <div className="menu">
+              <Link className="link menuLink" to="/">
+                Graphics & Design
+              </Link>
+              <Link className="link menuLink" to="/">
+                Video & Animation
+              </Link>
+              <Link className="link menuLink" to="/">
+                Writing & Translation
+              </Link>
+              <Link className="link menuLink" to="/">
+                AI Services
+              </Link>
+              <Link className="link menuLink" to="/">
+                Digital Marketing
+              </Link>
+              <Link className="link menuLink" to="/">
+                Music & Audio
+              </Link>
+              <Link className="link menuLink" to="/">
+                Programming & Tech
+              </Link>
+              <Link className="link menuLink" to="/">
+                Business
+              </Link>
+              <Link className="link menuLink" to="/">
+                Lifestyle
+              </Link>
+            </div>
+            <hr />
+          </>
+        )
       }
 
     </div>

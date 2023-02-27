@@ -7,7 +7,7 @@
   z-index: 999;
   transition: 0.5s all ease;
   color: white;
-  background-color: green;
+  background-color: #013914;
   &.active {
     background-color: white;
     color: black;
@@ -72,6 +72,7 @@
       display: flex;
       gap: 5px;
       align-items: center;
+      cursor: pointer;
       img {
         width: 32px;
         height: 32px;
@@ -107,11 +108,16 @@
   }
   .menu {
     width: 1200px;
+   
     display: flex;
     justify-content: space-between;
-    color: gray;
-    padding: 10px 0px;
-    font-weight: 300;
     font-family: "Montserrat", sans-serif;
+    
+    .link {
+      color: gray;
+      font-weight: 300;
+      padding: 10px 0px;
+      text-decoration: none;
+    }
   }
 }
