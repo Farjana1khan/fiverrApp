@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import GigCard from '../../Components/gigCard/GigCard';
 import "./Gigs.scss"
 
-
+import {gigs} from "../../data"
 export default function Gigs() {
 
     const [sort, setSort] = useState("sales");
@@ -10,6 +10,7 @@ export default function Gigs() {
 
   const minRef = useRef();
   const maxRef = useRef();
+
   const reSort = (type) => {
     setSort(type);
     setOpen(false);
@@ -54,7 +55,14 @@ export default function Gigs() {
             
           </div>
           <div className="cards">
-            <GigCard/>
+            {
+              gigs.map(gigs=>(
+              <GigCard key={gigs.id} item="{gig}" />
+              )
+                
+              )
+            }
+           
           </div>
           </div>
           </div>

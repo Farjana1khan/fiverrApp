@@ -7,14 +7,14 @@ export default function Gig() {
              <div className="container">
           <div className="left">
           <div className="user">
-                <img
+                {/* <img
                   className="pp"
-                  src={"dataUser.img" || "/img/noavatar.jpg"}
+                  src={dataUser.img || /img/noavatar.jpg}
                   alt=""
-                />
-                <span>{"dataUser.username"}</span>
+                /> */}
+                {/* <span>{dataUser.username}</span> */}
                 <div className="stars">
-                <img src="/img/star.png" alt="" key="{i}" />
+                {/* <img src="/img/star.png" alt="" key={i} /> */}
                 </div>
             </div>
             <Slider slidesToShow={1} arrowsScroll={1} className="slider">
@@ -27,9 +27,9 @@ export default function Gig() {
             <div className="seller">
                 <h2>About The Seller</h2>
                 <div className="user">
-                <img src={"dataUser.img" || "/img/noavatar.jpg"} alt="" />
+                {/* <img src={dataUser.img || /img/noavatar.jpg} alt="" /> */}
                 <div className="info">
-                    <span>{"dataUser.username"}</span>
+                    {/* <span>{dataUser.username}</span> */}
                     <div className="stars">
                     <img src="/img/star.png" alt="" key="{i}" />
 
@@ -41,7 +41,7 @@ export default function Gig() {
                   <div className="items">
                     <div className="item">
                       <span className="title">From</span>
-                      <span className="desc">{"dataUser.country"}</span>
+                      {/* <span className="desc">{dataUser.country}</span> */}
                     </div>
                     <div className="item">
                       <span className="title">Member since</span>
@@ -61,7 +61,7 @@ export default function Gig() {
                     </div>
                   </div>
                   <hr />
-                  <p>{"dataUser.desc"}</p>
+                  {/* <p>{dataUser.desc}</p> */}
                 </div>
                     </div>
             </div>
