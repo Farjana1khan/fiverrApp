@@ -1,4 +1,6 @@
-.projectCard {
+.link{
+  text-decoration: none;
+  .projectCard {
     width: 290px;
     height: 300px;
     border-radius: 5px;
@@ -34,8 +36,11 @@
         span {
           font-size: 14px;
           font-weight: 300;
+          text-decoration: none;
+          text-decoration-style: none;
         }
       }
     }
   }
+}
   

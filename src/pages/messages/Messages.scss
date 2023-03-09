@@ -1,7 +1,6 @@
-.myGigs {
+.messages {
     display: flex;
     justify-content: center;
-    color: #555;
   
     .container {
       width: 1200px;
@@ -25,29 +24,32 @@
         width: 100%;
   
         tr {
-          height: 50px;
+          height: 100px;
           th {
             text-align: left;
           }
           td {
+            padding: 10px;
   
-            sup{
-              font-size: 12px;
+            &:first-child {
+              font-weight: 500;
             }
             
-            .image {
-              width: 50px;
-              height: 25px;
-              object-fit: cover;
+            &:nth-child(2),
+            &:nth-child(3) {
+              color: gray;
             }
-  
-            .delete {
-              width: 20px;
-              cursor: pointer;
-            }
-  
           }
-          &:nth-child(even) {
+  
+          button {
+            background-color: #1dbf73;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+          }
+  
+          &.active {
             background-color: #1dbf730f;
           }
         }

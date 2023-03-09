@@ -17,7 +17,9 @@ export default function Gigs() {
   };
 
   const apply = () => {
-    //refetch();
+    console.log(minRef.current.value)
+    console.log(maxRef.current.value)
+    
   };
 
     return (
@@ -57,7 +59,7 @@ export default function Gigs() {
           <div className="cards">
             {
               gigs.map(gigs=>(
-              <GigCard key={gigs.id} item="{gig}" />
+              <GigCard key={gigs.id} item={gigs} />
               )
                 
               )
